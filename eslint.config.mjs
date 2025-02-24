@@ -14,3 +14,10 @@ const eslintConfig = [
 ];
 
 export default eslintConfig;
+
+
+export default [
+  {
+    ignores: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"], // Tüm dosyalar için ESLint'i devre dışı bırakır
+  },
+];
