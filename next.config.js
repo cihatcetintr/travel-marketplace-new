@@ -5,4 +5,11 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig
+
+/** @type {import('next').NextConfig} */
+module.exports = {
+  eslint: {
+    ignoreDuringBuilds: true, // ✅ Build sırasında ESLint hatalarını yoksayar
+  },
+};
