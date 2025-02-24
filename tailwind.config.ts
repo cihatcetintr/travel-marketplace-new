@@ -9,6 +9,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: "#F4A261", // Turuncu tema rengi
+        secondary: "#264653",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
