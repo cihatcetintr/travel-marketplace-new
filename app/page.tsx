@@ -18,22 +18,18 @@ export default function Home() {
   const handleFilters = (filters: any) => {
     let filtered = tours;
 
-    // Location filter
+    // Sadece bir filtre kategorisi seçilebilir
     if (filters.location) {
       filtered = filtered.filter(tour => 
         tour.location.toLowerCase().includes(filters.location.toLowerCase())
       );
     }
-
-    // Category filter
-    if (filters.category) {
+    else if (filters.category) {  // location yoksa category'i kontrol et
       filtered = filtered.filter(tour => 
         tour.category === filters.category
       );
     }
-
-    // Activities filter
-    if (filters.activities.length > 0) {
+    else if (filters.activities.length > 0) {  // location ve category yoksa activities'i kontrol et
       filtered = filtered.filter(tour => 
         filters.activities.some((activity: string) => 
           tour.activities.includes(activity)
@@ -41,7 +37,7 @@ export default function Home() {
       );
     }
 
-    // Price filter
+    // Price filter her zaman uygulanabilir
     filtered = filtered.filter(tour => 
       tour.price <= filters.priceRange
     );

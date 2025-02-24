@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import { FiMenu, FiHeart, FiShoppingCart, FiUser } from 'react-icons/fi';
 import { useFavorites } from '@/context/FavoritesContext';
